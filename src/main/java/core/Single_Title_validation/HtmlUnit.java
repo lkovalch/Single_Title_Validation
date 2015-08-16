@@ -6,12 +6,22 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 public class HtmlUnit {
 	public static void main(String[] args) {
+		
+		/*if (args.length ==0){
+			System.err.println("No arguments!");
+			System.exit(1);
+		}*/
 
 		WebDriver driver = new HtmlUnitDriver();   // Version 1.2 :: HtmlUnit
 
 		String text_case_id = "TC-002.01";
-		String url = "http://www.learn2test.net";
+		
+		String url = "http://www.learn2test.net";		
 		String title_expected = "learn2test.net";
+		
+		//String param []=args[0].split("\\|");
+		//String url =param [0];
+		//String title_expected =param [1];
 		
 		driver.get(url);
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
